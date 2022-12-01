@@ -34,6 +34,11 @@ public class Exa17p {
         return conn;
     }
 
+    public void desconectar() {
+        conn = null;
+    }
+
+
     private static int precio;
     private static int cantidad;
     private static int elemento;
@@ -94,6 +99,7 @@ public class Exa17p {
             xml.next();
         }
 
+        desconectar();
     }
 
     public static void main(String[] args) throws XMLStreamException, SQLException, FileNotFoundException {

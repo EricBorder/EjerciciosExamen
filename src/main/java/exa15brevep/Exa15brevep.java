@@ -30,6 +30,9 @@ public class Exa15brevep implements Serializable {
 
         return conn;
     }
+    public void desconectar() {
+        conn = null;
+    }
 
     public void leerPlatos(Platos plato, File file, File file2) throws IOException, ClassNotFoundException, SQLException, XMLStreamException {
         XMLOutputFactory out = XMLOutputFactory.newInstance();
@@ -78,6 +81,7 @@ public class Exa15brevep implements Serializable {
 
         inpF.close();
         xml.close();
+        desconectar();
 
     }
 

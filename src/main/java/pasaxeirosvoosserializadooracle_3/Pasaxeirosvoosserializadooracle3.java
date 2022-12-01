@@ -26,6 +26,10 @@ public class Pasaxeirosvoosserializadooracle3 implements Serializable {
 
         return conn;
     }
+    public void desconectar() {
+        conn = null;
+    }
+
 
     private static int acumuladorPrecio;
 
@@ -54,6 +58,7 @@ public class Pasaxeirosvoosserializadooracle3 implements Serializable {
                 }
             }
         }
+        desconectar();
 
     }
 
